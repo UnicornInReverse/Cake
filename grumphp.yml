@@ -1,0 +1,28 @@
+parameters:
+    git_dir: .
+    bin_dir: vendor/bin
+    tasks:
+      git_blacklist:
+          keywords:
+            - "var_dump("
+            - "die("
+          triggered_by: [php]
+      phpcs:
+          standard: "vendor/cakephp/cakephp-codesniffer/CakePHP/"
+          ignore_patterns:
+            - "*.ctp"
+            - config/
+            - logs/
+            - plugins/
+            - tests/
+            - tmp/
+            - webroot/
+      git_commit_message:
+          allow_empty_message: false
+          enforce_capitalized_subject: true
+          enforce_no_subject_trailing_period: true
+          enforce_single_lined_subject: true
+          matchers:
+              Must contain issue number: /issue-\d+/
+          case_insensitive: true
+          multiline: true

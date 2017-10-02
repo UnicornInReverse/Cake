@@ -1,0 +1,5 @@
+vendor/
+/bookmarker/config/app.php
+/bookmarker/tmp/
+/bookmarker/logs/
+.idea/
