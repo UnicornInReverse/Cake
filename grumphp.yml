@@ -26,6 +26,6 @@ parameters:
           enforce_no_subject_trailing_period: true
           enforce_single_lined_subject: true
           matchers:
-              Must contain issue number: /Ref \#\d+/
+              Must contain issue number: /Ref|Fixes \#\d+/
           case_insensitive: true
           multiline: true
